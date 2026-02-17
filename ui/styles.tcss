@@ -1,0 +1,343 @@
+/* RunPod Dashboard Styles */
+
+Screen {
+    layout: vertical;
+}
+
+/* ─── Summary bar (dashboard) ─── */
+
+#summary-bar {
+    height: 1;
+    padding: 0 1;
+    background: $surface;
+    color: $text;
+    text-style: bold;
+}
+
+/* ─── Template summary (dashboard) ─── */
+
+#template-summary {
+    height: auto;
+    max-height: 8;
+    padding: 0 1;
+    background: $surface;
+    margin: 0;
+}
+
+/* ─── Pod table ─── */
+
+PodTable {
+    height: 1fr;
+    margin: 0 1;
+}
+
+/* ─── Form layout (shared) ─── */
+
+.form-section {
+    layout: vertical;
+    height: auto;
+    padding: 1;
+    margin: 0 0 1 0;
+    border: tall $primary;
+}
+
+.form-section-title {
+    text-style: bold;
+    color: $accent;
+    margin: 0 0 1 0;
+}
+
+.form-row {
+    layout: horizontal;
+    height: auto;
+    min-height: 3;
+    margin: 0 0 1 0;
+}
+
+.form-label {
+    width: 16;
+    padding: 1 1 0 0;
+}
+
+.form-row Select {
+    width: 1fr;
+}
+
+.form-row Input {
+    width: 1fr;
+}
+
+/* ─── Deploy wizard ─── */
+
+#step-indicator {
+    height: 1;
+    padding: 0 1;
+    background: $surface;
+    text-style: bold;
+}
+
+#wizard {
+    height: 1fr;
+}
+
+#wizard VerticalScroll {
+    height: 1fr;
+    padding: 1 2;
+}
+
+#wizard DataTable {
+    height: 1fr;
+    min-height: 8;
+}
+
+#wizard-nav {
+    height: auto;
+    dock: bottom;
+    padding: 1 2;
+    background: $surface;
+}
+
+#wizard-nav Button {
+    margin: 0 1;
+}
+
+/* ─── Cost display ─── */
+
+CostDisplay {
+    height: auto;
+    min-height: 1;
+    padding: 0 1;
+    background: $boost;
+    margin: 1 0;
+}
+
+/* ─── Stop screen ─── */
+
+#stop-container {
+    layout: vertical;
+    height: 1fr;
+    padding: 1 2;
+}
+
+#stop-title {
+    height: 1;
+    margin: 0 0 1 0;
+}
+
+#stop-filter-bar {
+    layout: horizontal;
+    height: auto;
+    margin: 0 0 1 0;
+}
+
+#stop-filter-bar Input {
+    width: 1fr;
+}
+
+#selection-count {
+    height: 1;
+    margin: 0 0 1 0;
+}
+
+#stop-pod-table {
+    height: 1fr;
+}
+
+/* ─── Confirm dialog ─── */
+
+#confirm-dialog {
+    width: 60;
+    height: auto;
+    padding: 2;
+    background: $surface;
+    border: heavy $warning;
+    align: center middle;
+}
+
+#confirm-dialog Static {
+    margin: 0 0 1 0;
+}
+
+#confirm-buttons {
+    layout: horizontal;
+    height: auto;
+    align: center middle;
+}
+
+#confirm-buttons Button {
+    margin: 0 1;
+}
+
+/* ─── Rolling deploy screen ─── */
+
+#deploy-container {
+    layout: vertical;
+    height: 1fr;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+#deploy-progress-list {
+    height: 1fr;
+    border: tall $primary;
+    padding: 1;
+    margin: 1 0;
+}
+
+.deploy-pod-entry {
+    height: 1;
+}
+
+.deploy-pod-entry.completed {
+    color: $success;
+}
+
+.deploy-pod-entry.in-progress {
+    color: $warning;
+}
+
+.deploy-pod-entry.failed {
+    color: $error;
+}
+
+#countdown-display {
+    height: 1;
+    text-style: bold;
+    color: $warning;
+    padding: 0 1;
+}
+
+/* ─── Logs screen ─── */
+
+#logs-container {
+    layout: vertical;
+    height: 1fr;
+    padding: 1 2;
+}
+
+#logs-filter-bar {
+    layout: horizontal;
+    height: 3;
+    margin: 0 0 1 0;
+}
+
+#logs-filter-bar Select {
+    width: 1fr;
+    margin: 0 1;
+}
+
+#logs-table {
+    height: 1fr;
+}
+
+#log-detail {
+    height: 8;
+    border: tall $primary;
+    padding: 1;
+    margin: 1 0 0 0;
+}
+
+/* ─── Bulk screen ─── */
+
+#bulk-container {
+    layout: vertical;
+    height: 1fr;
+    padding: 1 2;
+}
+
+#bulk-actions {
+    layout: horizontal;
+    height: auto;
+    margin: 0 0 1 0;
+}
+
+#bulk-actions Button {
+    margin: 0 1;
+}
+
+#bulk-pod-list {
+    height: 1fr;
+    margin: 0 0 1 0;
+}
+
+/* ─── Help screen ─── */
+
+#help-container {
+    width: 70;
+    height: auto;
+    max-height: 80%;
+    padding: 2;
+    background: $surface;
+    border: heavy $accent;
+}
+
+#help-container Static {
+    margin: 0 0 1 0;
+}
+
+/* ─── General ─── */
+
+Input.-invalid {
+    border: tall $error;
+}
+
+.status-running {
+    color: green;
+    text-style: bold;
+}
+
+.status-starting {
+    color: yellow;
+    text-style: bold;
+}
+
+.status-stopped {
+    color: red;
+    text-style: bold;
+}
+
+#notification-area {
+    dock: bottom;
+    height: auto;
+    max-height: 5;
+}
+
+GpuSelector {
+    width: 1fr;
+}
+
+ProgressBar {
+    margin: 1 0;
+}
+
+.screen-title {
+    text-style: bold;
+    color: $accent;
+    padding: 0 1;
+    height: 1;
+}
+
+/* ─── Scale container (legacy compat) ─── */
+
+#scale-container {
+    layout: vertical;
+    height: 1fr;
+    padding: 1 2;
+    overflow-y: auto;
+}
+
+/* ─── Template picker (for screens that still use it) ─── */
+
+#template-picker {
+    height: auto;
+    padding: 0 0 1 0;
+}
+
+#template-picker Select {
+    width: 1fr;
+}
+
+#template-picker Input {
+    width: 1fr;
+    margin: 0;
+}
